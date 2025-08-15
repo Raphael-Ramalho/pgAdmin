@@ -29,7 +29,7 @@ const otto = new Person("Otto")
   */
 
   /** By declaring userRepository inside constructor, nestJs instantiate it automatically.
-   * similar as
+   * similar as:
    * const userRepository = new UserRepository()
    *
    * To implement it, look at comments on file user.repository.ts
