@@ -1,5 +1,6 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { UserRepository } from './user.repository';
+import { CreateUserDto } from './dto/createUser.dto';
 
 /**
  * Controllers are responsible for handling incoming requests and sending responses back to the client.
@@ -42,7 +43,7 @@ const otto = new Person("Otto")
   }
 
   @Post() //signals that the following method will be called on post
-  createUser(@Body() userData: unknown) {
+  createUser(@Body() userData: CreateUserDto) {
     //@Body() indicate that the userData will come from the body request
 
     this.userRepository.save(userData);
